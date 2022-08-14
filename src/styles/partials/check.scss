@@ -1,0 +1,458 @@
+
+
+.check {
+    padding-top: 190px;
+    padding-bottom: 60px;
+    overflow: hidden;
+    background: #F6F6F6;
+
+    @media (max-width: 1150px){
+        padding-top: 120px;
+    }
+    @media (max-width: 768px){
+        padding-top: 24vw;
+        padding-bottom: 30px;
+        margin-bottom: 0;
+    }
+    &__container {}
+
+    &__title {
+        color: #000000;
+        img {
+            bottom: 32px;
+            @media (max-width: 1100px){
+                bottom: 26px;
+            }
+            @media (max-width: 768px){
+                bottom: 4.267vw;
+            }
+        }
+        &-line {
+            width: 100vw;
+            top: 25%;
+        }
+    }
+
+    &__row {
+        display: flex;
+        @media (max-width: 768px){
+            flex-direction: column;
+        }
+    }
+
+    &__body {
+        flex: 0 0 560px;
+        @media (max-width: 1023px){
+            flex: 0 1 50%;
+        }
+        @media (max-width: 768px){
+            order: 2;
+            flex: 1 1 auto;
+        }
+    }
+
+    &__text {
+        margin-top: 15px;
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #101010;
+        @media (max-width: 768px){
+            width: 81.333vw;
+            margin-top: 2.667vw;
+            font-size: 4.267vw;
+            line-height: 118.75%;
+        }
+    }
+    &__text-desktop {
+        @media (max-width: 768px){
+            display: none;
+        }
+    }
+    &__text-mobile {
+        display: none;
+        @media (max-width: 768px){
+            display: block;
+        }
+    }
+
+    &__form {
+
+    }
+
+    &__img {
+        margin-left: 40px;
+        flex: 1 1 auto;
+        min-height: 437px;
+        position: relative;
+        background: url('../images/2check/1.jpg') 0 0 / auto 100%  no-repeat;
+        @media (max-width: 768px){
+            order: 1;
+            margin-top: 6.667vw;
+            min-height: 60.533vw;
+            margin-left: -4vw;
+            margin-right: -4vw;
+            background: url('../images/2check/11.jpg') 0 0 / 100% 100% no-repeat;
+        }
+        &--text {
+            width: 243px;
+            height: 38px;
+            background-color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Muller';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            color: #101010;
+            position: absolute;
+            bottom: 75px;
+            left: 22px;
+            @media (max-width: 768px){
+                width: 57.867vw;
+                height: 10.133vw;
+                bottom: 4.267vw;
+                left: 4.267vw;
+                font-size: 3.200vw;
+                line-height: 100%;
+            }
+            span {
+                position: relative;
+                z-index: 2;
+            }
+            &::before,&::after{
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 50%;
+            }
+            &::before{
+                width: 19px;
+                height: 19px;
+                background-color: #ffffff;
+                transform: translate(-50%, -40%) rotate(45deg);
+                @media (max-width: 768px){
+                    width: 5.067vw;
+                    height: 5.067vw;
+                }
+            }
+            &::after{
+                width: 17px;
+                height: 17px;
+                background: #FFFFFF;
+                border: 4px solid #D24318;
+                border-radius: 50%;
+                transform: translate(-50%, -200%);
+                @media (max-width: 768px){
+                    border: 1.067vw solid #D24318;
+                    width: 4.533vw;
+                    height: 4.533vw;
+                    transform: translate(-50%, calc(-100% - 3.200vw));
+                }
+            }
+        }
+    }
+}
+
+.form-check {
+    margin-top: 50px;
+    width: 366px;
+    @media (max-width: 768px){
+        width: 100%;
+        margin-top: 6.667vw;
+    }
+    &__input-wrapper {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex: 1 1 auto;
+        background: #FFFFFF;
+        @media (max-width: 768px){
+            height: 10.667vw;
+        }
+        &:not(:last-child) {
+            margin-bottom: 10px;
+            @media (max-width: 768px){
+                margin-bottom: 2.667vw;
+            }
+        }
+        input{
+            padding-left: 8px;
+            box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
+            width: 100%;
+            font-family: 'TT Norms';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            @media (max-width: 768px){
+                font-size: 4.267vw;
+                line-height: 118.75%;
+            }
+        }
+        input::placeholder {
+            font-family: 'TT Norms';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #C7C7C7;
+            @media (max-width: 768px){
+                font-size: 4.267vw;
+                line-height: 118.75%;
+            }
+        }
+    }
+
+    &__icon {
+        min-width: 40px;
+        min-height: 40px;
+        @media (max-width: 768px){
+            min-width: 10.667vw;
+            min-height: 10.667vw;
+        }
+        img {
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__btn {
+        width: 267px;
+        height: 57px;
+        margin: 0 auto;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #D24318;
+        font-family: 'TT Norms';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        @media (max-width: 768px){
+            width: 100%;
+            height: 15.200vw;
+            margin-top: 5.333vw;
+            font-size: 4.800vw;
+        }
+    }
+
+
+}
+
+.registered {
+    &__container {
+        font-family: 'TT Norms';
+        font-size: 20px;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__main-text {
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 40px;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__main-text-serial-number {
+        color: #D24318;
+        font-weight: 700;
+    }
+
+    &__row {
+        display: flex;
+        @media (max-width: 768px){
+            flex-direction: column;
+        }
+    }
+
+    &__row-main {
+        margin-bottom: 30px;
+        @media (max-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__row-footer {
+        margin-bottom: 100px;
+        @media (max-width: 768px) {
+            margin-right: -4vw;
+            margin-left: -4vw;
+            padding: 10px 0 25px 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__col1 {
+        flex: 0 0 50%;
+    }
+
+    &__col2 {
+        flex: 0 0 50%;
+    }
+
+    &__col1-img-wrap {
+
+        @media (max-width: 768px) {
+            margin-right: -4vw;
+            margin-left: -4vw;
+        }
+    }
+
+    &__photo-lg {
+        max-width: 100%;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__photo-sm {
+        max-width: 100%;
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    &__col-main-info {
+        display: flex;
+        align-items: center;
+        background: white;
+        @media (max-width: 768px) {
+            padding-top: 20px;
+            margin-right: -4vw;
+            margin-left: -4vw;
+        }
+    }
+
+    &__main-info {
+        width: 100%;
+        padding-left: 53px;
+        @media (max-width: 768px) {
+            padding: 0 4vw 15px 4vw;
+        }
+    }
+
+    &__content-header {
+        font-family: 'Muller';
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 24px;
+        @media (max-width: 768px) {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1;
+            margin: 15px 0 10px;
+        }
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+
+        & tr {
+
+        }
+
+        & th {
+            font-family: 'Muller';
+            font-weight: 500;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        & td {
+            font-size: 20px;
+        }
+
+        & th,
+        & td {
+            line-height: 1;
+            padding: 10px 10px 5px 0;
+            border-bottom: 1px solid rgba(201, 201, 201, 0.5);
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__col1-footer {
+        @media (max-width: 768px) {
+        }
+    }
+
+    &__col1-comment {
+        padding: 10px 4vw 25px 4vw;
+    }
+
+    &__col1-comment-title {
+        font-family: 'Muller';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 12px;
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
+    }
+
+    &__col1-comment-text {
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    &__col2-warranty-doc-link{
+        text-align: right;
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+    }
+
+    &__warranty-doc-link {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        display: inline-block;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #D24318;
+        color: #D24318;
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+        @media (max-width: 360px) {
+            border-bottom: none;
+            text-decoration: underline;
+        }
+    }
+}
+

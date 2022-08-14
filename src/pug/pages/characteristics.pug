@@ -1,0 +1,124 @@
+extends ../layouts/default
+
+block vars
+    -
+        const page = {
+            title: 'HYGGELIG'
+        };
+
+block main
+    .characteristics 
+
+        .characteristics__container.container
+            .characteristics__title.general-title 
+                img(src="images/arrow.svg", alt="arrow")
+                span Характеристики
+                span.characteristics__title-line.general-title-line
+            .characteristics__body
+                .characteristics__img
+                    img(src="images/characteristics/img.png", alt="alt")
+                .characteristics__tabs
+                    .characteristics__btns
+                    .swiper.characteristicsSwiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                ul.characteristics__list
+                                    li.characteristics__item
+                                        .characteristics__name Габариты печи с полками 
+                                            br
+                                            |и дымоходом, мм
+                                        .characteristics__value 1000*280*1800
+                                    li.characteristics__item
+                                        .characteristics__name Габариты печи без полок, 
+                                            br
+                                            |с дымоходом, мм
+                                        .characteristics__value 500*280*1800
+                                    li.characteristics__item
+                                        .characteristics__name Высота от земли
+                                            br
+                                            |до варочной панели, мм
+                                        .characteristics__value 420
+                                    li.characteristics__item
+                                        .characteristics__name Размер духового шкафа, мм
+                                        .characteristics__value 490*80*230
+                                    li.characteristics__item
+                                        .characteristics__name Размер варочной панели, мм
+                                        .characteristics__value 500*250
+                                    li.characteristics__item
+                                        .characteristics__name Размер сумки, мм
+                                        .characteristics__value 700*300*300
+                                    li.characteristics__item
+                                        .characteristics__name Вес печи, кг
+                                        .characteristics__value 19,6
+                                    li.characteristics__item
+                                        .characteristics__name Полная мощность печи, 
+                                            br
+                                            |кВт/час
+                                        .characteristics__value 4,7
+                                    li.characteristics__item
+                                        .characteristics__name Мощность печи в режиме  
+                                            br
+                                            |обогрева, кВт/час
+                                        .characteristics__value 2,5
+                                    li.characteristics__item
+                                        .characteristics__name Объём отапливаемого
+                                            br
+                                            |помещения, м3
+                                        .characteristics__value до 50
+                                    li.characteristics__item
+                                        .characteristics__name Время нагрева воздуха  
+                                            br
+                                            |с нуля до 20°C
+                                            br
+                                            |(наружная температура -10°C)
+                                        .characteristics__value 7 минут
+                                    li.characteristics__item
+                                        .characteristics__name Температура варочной 
+                                            br
+                                            |поверхности, °C
+                                        .characteristics__value 230-450
+                                    li.characteristics__item
+                                        .characteristics__name Средняя температура в&nbsp;духовке,  
+                                            br
+                                            |открытая заслонка, °C 
+                                        .characteristics__value 200-220
+                                    li.characteristics__item
+                                        .characteristics__name Средняя температура в&nbsp;духовке, 
+                                            br
+                                            |закрытая заслонка, °C
+                                        .characteristics__value 160
+                            .swiper-slide
+                                .characteristics__text Гранулированные пеллеты из любого сырья (хвойные, берёзовые, лиственные). Фракция 6 или 8 мм, длина до 3 см.
+                                ul.characteristics__list
+                                    li.characteristics__item
+                                        .characteristics__name Вместимость камеры 
+                                            br
+                                            |сгорания, кг
+                                        .characteristics__value 0,5
+                                    li.characteristics__item
+                                        .characteristics__name Вместимость камеры сгорания 
+                                            br
+                                            |с топливным бункером, кг
+                                        .characteristics__value 2
+                            .swiper-slide
+                                ul.characteristics__list
+                                    li.characteristics__item
+                                        .characteristics__name Фракция 6 мм, 
+                                            br
+                                            |открытая заслонка
+                                        .characteristics__value 0,8 кг/час
+                                    li.characteristics__item
+                                        .characteristics__name Фракция 6 мм, 
+                                            br
+                                            |закрытая заслонка
+                                        .characteristics__value 0,4 кг/час
+                                    li.characteristics__item
+                                        .characteristics__name Фракция 8 мм, 
+                                            br
+                                            |открытая заслонка
+                                        .characteristics__value 1 кг/час
+                                    li.characteristics__item
+                                        .characteristics__name Фракция 8 мм, 
+                                            br
+                                            |закрытая заслонка
+                                        .characteristics__value 0,5 кг/час

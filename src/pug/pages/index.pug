@@ -1,0 +1,765 @@
+extends ../layouts/default
+
+block vars
+    -
+        const page = {
+            title: 'HYGGELIG'
+        };
+
+block main
+    .hero 
+        .hero__container.container 
+            .hero__body 
+                .hero__title
+                    |Первая 
+                    br
+                    |походная печь
+                .hero__subtitle 
+                    |С духовым шкафом на 
+                    br
+                    |пеллетах
+                ul.hero__list 
+                    li.hero__item
+                        img(src="images/hero/arrow.svg", alt="arrow")
+                        span Легко разместить в багажнике авто 
+                    li.hero__item 
+                        img(src="images/hero/arrow.svg", alt="arrow")
+                        span Тепло в палатке за 10 минут
+                    li.hero__item 
+                        img(src="images/hero/arrow.svg", alt="arrow")
+                        span 3 уровня защиты от возгорания
+                .hero__btns
+                    a.hero__btns--check.hero__btn(href="check.html") Проверить печь
+                    a(href='#buy').hero__btns--buy.hero__btn Купить
+    
+    .hugge__popap-back
+    .hugge#hugge
+        .hugge__overflow
+            .hugge__container.container
+                .hugge__swiper-container
+                    .hugge__swiper.swiper
+                        .hugge__swiper-wrapper.swiper-wrapper
+                            .hugge__swiper-slide.swiper-slide
+                                .hugge__swiper-img
+                                    img(src="images/hugge/slider/01.jpg", alt="alt")
+                            .hugge__swiper-slide.swiper-slide
+                                .hugge__swiper-img
+                                    img(src="images/hugge/slider/02.jpg", alt="alt")
+                            .hugge__swiper-slide.swiper-slide
+                                .hugge__swiper-img
+                                    img(src="images/hugge/slider/03.jpg", alt="alt")
+                            .hugge__swiper-slide.swiper-slide
+                                .hugge__swiper-img
+                                    img(src="images/hugge/slider/04.jpg", alt="alt")
+                            .hugge__swiper-slide.swiper-slide
+                                .hugge__swiper-img
+                                    img(src="images/hugge/slider/05.jpg", alt="alt")
+                            .hugge__swiper-slide.swiper-slide
+                                .hugge__swiper-img
+                                    img(src="images/hugge/slider/06.jpg", alt="alt")
+                        .hugge__swiper-arrow-prev.hugge__swiper-arrow
+                        .hugge__swiper-arrow-next.hugge__swiper-arrow
+                    .hugge__swiper-pagination
+
+                .hugge__body
+                    .hugge__title.general-title.show
+                        img(src="images/arrow.svg", alt="arrow")
+                        span.show Хюгге
+                        span.hugge__title-line.general-title-line.show
+                    .hugge__text.show
+                        p Жить, согласно принципу Хюгге - значит ценить обычные радости жизни, наслаждаясь моментом.
+                        p Слушать шум ветра, который запутался в листве, вглядываться в дымку прохладного утреннего тумана, пить обжигающий чай с запахом хвои.
+                    .hugge__btn-wrapper.show
+                        a(href="#hugge").hugge__btn.click
+                            img(src="images/hugge/icon.svg", alt="alt")
+                            span слово основателя
+
+    .hugge__popap-wrapper
+        .hugge__popap-container
+            .hugge__popap-words
+                span.hugge__popap-close
+                .hugge__popap-img
+                .hugge__popap-body
+                    .hugge__popap-title.show “Некрасивый самолёт не&nbsp;летает”
+                    .hugge__popap-text.hugge__popap-text-desktop
+                        p
+                            |Я думаю, что все мы покупаем вещи, для того, чтобы пользоваться ими и получать от этого удовольствие, а не решать проблемы с их эксплуатацией.
+                        p
+                            |Мы создаём свои продукты с мыслью о том, что они должны служить людям, и радовать их. Именно поэтому мы уделяем большое внимание мелочам. Когда каждый компонент продуман и добротно сделан - это чувствуется, ведь о вас позаботились инженеры.
+                        p
+                            |«Некрасивый самолёт не летает», так говорил человек, которого я считаю своим учителем. И&nbsp;он абсолютно прав.
+                        p
+                            |Бренд HYGGELIG - это про дружбу и общение, про отдых и путешествия. Про то, как важно иногда быть собой, уединенно живя в природе, вдали от города и суеты.
+                            |HYGGELIG - это про заботу. Заботу о Вас.
+                    .hugge__popap-text.hugge__popap-text-mobile
+                        p.show
+                            |Я думаю, что все мы покупаем вещи, для того, чтобы пользоваться ими и получать от этого удовольствие, а не решать проблемы с их эксплуатацией.
+                        p.show
+                            |Мы создаём свои продукты с мыслью о том, что они должны служить людям, и радовать их. Именно поэтому мы уделяем большое внимание мелочам. Когда каждый компонент продуман и добротно сделан - это чувствуется, ведь о вас позаботились инженеры.
+                        p.show
+                            |«Некрасивый самолёт не летает», так говорил человек, которого я считаю своим учителем. И&nbsp;он абсолютно прав.
+                        p.show
+                            |Бренд HYGGELIG - это про дружбу и общение, про отдых и путешествия. Про то, как важно иногда быть собой, уединенно живя в природе, вдали от города и суеты.
+                            |HYGGELIG - это про заботу. Заботу о Вас.
+                    .hugge__popap-name.show Степан Слотин, основатель бренда HYGGELIG
+
+    .comfort#comfort 
+        .comfort__container.container 
+            .comfort__title.general-title.show 
+                img(src="images/arrow.svg", alt="arrow")
+                span.show Комфорт всегда 
+                    br
+                    |с тобой
+                span.comfort__title-line.general-title-line.show 
+            .comfort__subtitle.comfort__subtitle-desktop.show 
+                |Безопасная, компактная и надежная печь 
+                br
+                |для готовки и обогрева палатки
+            .comfort__subtitle.comfort__subtitle-mobile.show 
+                |Безопасная, компактная 
+                br
+                |и надежная печь для готовки 
+                br
+                |и обогрева палатки
+
+            .comfort__body 
+                .comfort__body-img
+                    img(src="images/comfort/img.png", alt="alt")
+                .comfort__anim-container 
+                    .comfort__circle 
+                    .comfort__img
+                        .comfort__items 
+                            .comfort__point.comfort__point-left1.comfort__point-left
+                            .comfort__text-hidden.comfort__text-hidden-left1.comfort__text-hidden-left 
+                                div
+                                span.comfort__text-inner 
+                                    |Топливный 
+                                    br
+                                    |бункер
+                            .comfort__point.comfort__point-left2.comfort__point-left 
+                            .comfort__text-hidden.comfort__text-hidden-left2.comfort__text-hidden-left 
+                                div
+                                span.comfort__text-inner Камера сгорания
+                            .comfort__point.comfort__point-left3.comfort__point-left 
+                            .comfort__text-hidden.comfort__text-hidden-left3.comfort__text-hidden-left 
+                                div
+                                span.comfort__text-inner Заслонка 
+                            .comfort__point.comfort__point-left4.comfort__point-left 
+                            .comfort__text-hidden.comfort__text-hidden-left4.comfort__text-hidden-left 
+                                div
+                                span.comfort__text-inner Складные ножки
+                        
+                            .comfort__point.comfort__point-right1.comfort__point-right 
+                            .comfort__text-hidden.comfort__text-hidden-right1.comfort__text-hidden-right
+                                div
+                                span.comfort__text-inner Дымоход
+                            .comfort__point.comfort__point-right2.comfort__point-right 
+                            .comfort__text-hidden.comfort__text-hidden-right2.comfort__text-hidden-right
+                                div
+                                span.comfort__text-inner Варочная поверхность
+                            .comfort__point.comfort__point-right3.comfort__point-right 
+                            .comfort__text-hidden.comfort__text-hidden-right3.comfort__text-hidden-right
+                                div
+                                span.comfort__text-inner Полки для посуды
+                            .comfort__point.comfort__point-right4.comfort__point-right 
+                            .comfort__text-hidden.comfort__text-hidden-right4.comfort__text-hidden-right
+                                div
+                                span.comfort__text-inner Каминное окно
+                            .comfort__point.comfort__point-right5.comfort__point-right 
+                            .comfort__text-hidden.comfort__text-hidden-right5.comfort__text-hidden-right
+                                div
+                                span.comfort__text-inner Духовой шкаф 
+
+                .comfort__btn-wrapper
+                    a.comfort__btn(href='images/comfort/Инструкция походной печи HYGGELIG.pdf', download).click
+                        span скачать инструкцию
+                        //- img(src="images/comfort/play btn.svg", alt="alt")
+
+    .comfort-video#comfort-video
+        span.comfort-video__close
+        video#comfort-video__player.comfort-video__player(src="images/video/shutterstock_hd_31053025_1.mp4")
+        .comfort-video__pause.pause
+        .comfort-video__img.play
+        .comfort-video__body
+            .comfort-video__play-btn
+                img(src="images/playBtn.svg", alt="alt")
+
+
+    .block-oven#block-oven
+        .container.block-oven__container 
+            .block-oven__left 
+                .block-oven__title.general-title.show 
+                    img(src="images/arrow.svg", alt="arrow")
+                    span.show Печь - огонь
+                    span.block-oven__title-line.general-title-line.show
+                .block-oven__subtitle.block-oven__subtitle-desktop.show 
+                    |Печь Hyggelig работает на пеллетах, 
+                    br
+                    |а это лёгкое,  удобное и энергоэффективное топливо
+                .block-oven__subtitle.block-oven__subtitle-mobile.show 
+                    |Печь Hyggelig работает 
+                    br
+                    |на пеллетах, а это лёгкое,  удобное 
+                    br
+                    |и энергоэффективное топливо
+
+            .block-oven__right 
+                .block-oven__right--container 
+                    .block-oven__right--title.show Преимущества пеллет
+                    ul.block-oven__right--list
+                        img(src="images/block-oven/img.png", alt="alt")
+                        li.block-oven__right--item.show 
+                            span.block-oven__right--item-title.show 
+                                span Ровное и тихое горение
+                                span.block-oven__right--item-line.block-oven__right--item-line-mob1
+                            span.block-oven__right--item-text 
+                                |Постоянная температура 
+                                br
+                                |на протяжении горения
+                        li.block-oven__right--item.show 
+                            span.block-oven__right--item-title.show 
+                                span Сгорают почти полностью
+                                span.block-oven__right--item-line.block-oven__right--item-line-mob2
+                            span.block-oven__right--item-text
+                                |Остывшие “отходы” 
+                                br
+                                |улетают в дымоход
+                        li.block-oven__right--item.show 
+                            span.block-oven__right--item-title.show 
+                                span Положи куда удобно
+                                span.block-oven__right--item-line
+                            span.block-oven__right--item-text
+                                |Пеллеты можно засыпать в рюкзак, 
+                                br
+                                |бутылку из-под воды или пакет
+                    .block-oven__right--title.show Время горения:
+                    .block-oven__right--bottom 
+                        .block-oven__right--sec.show 
+                            .block-oven__right--sec-left 
+                                |Камера сгорания 
+                            .block-oven__right--sec-right 
+                                span 20 минут
+                                img(src="images/block-oven/circle-notfull.svg", alt="alt").block-oven__right-img1
+                        .block-oven__right--sec.show 
+                            .block-oven__right--sec-left 
+                                |Камера сгорания 
+                                br
+                                |с топливным бункером,
+                                br
+                                |интенсивное горение 
+                                br
+                                |(открытая заслонка) 
+                            .block-oven__right--sec-right 
+                                span 2 часа
+                                img(src="images/block-oven/circle-two.svg", alt="alt").block-oven__right-img2
+                        .block-oven__right--sec.show 
+                            .block-oven__right--sec-left 
+                                |Камера сгорания 
+                                br
+                                |с топливным бункером,
+                                br
+                                |поддержка горения 
+                                br
+                                |(закрытая заслонка)
+                            .block-oven__right--sec-right 
+                                span 4 часа
+                                img(src="images/block-oven/circle-four.svg", alt="alt").block-oven__right-img3
+
+    .hugge-style#hugge-style
+        .container.hugge-style__container 
+            .hugge-style__title.general-title.show 
+                img(src="images/arrow.svg", alt="arrow")
+                span.show Еда в стиле Хюгге
+                span.hugge-style__title-line.general-title-line.show
+            .hugge-style__discription.show
+                p Аппетит в походе или на рыбалке разгорается с двойной силой! 
+                    br
+                    |И это особое первобытное счастье - вырваться из своих 
+                    br
+                    |квадратных метров в дикую, пахнущую пьянящим воздухом природу.
+
+                p.show Еда в стиле Хюгге - это поле для экспериментов, 
+                    br
+                    |и сегодня ты - главный по походной кухне. 
+            .hugge-style__items 
+                .hugge-style__item.show  
+                    .hugge-style__column 
+                        .hugge-style__img
+                            img(src="images/hugge-style/1.jpg", alt="alt") 
+                        .hugge-style__text Духовой шкаф для запекания 
+                            br
+                            |или тушения
+                .hugge-style__item.show  
+                    .hugge-style__column 
+                        .hugge-style__img
+                            img(src="images/hugge-style/2.jpg", alt="alt") 
+                        .hugge-style__text Удобные боковые полки для посуды
+                .hugge-style__item.show  
+                    .hugge-style__column 
+                        .hugge-style__img
+                            img(src="images/hugge-style/3.jpg", alt="alt") 
+                        .hugge-style__text Варочная поверхность с двумя 
+                            br
+                            |зонами нагрева
+
+    .instruction-video#instruction-video
+        video#instruction-video__player.instruction-video__player(src="images/video/shutterstock_hd_31053025_1.mp4")
+        .instruction-video__pause.pause
+        .instruction-video__img.play
+        .instruction-video__body
+            .instruction-video__title.show Инструкция по сборке и разборке&nbsp;печи
+            .instruction-video__play-btn.show
+                img(src="images/playBtn.svg", alt="alt")
+
+    .hyggelig
+        .hyggelig__container.container 
+            .hyggelig__title.general-title.show 
+                img(src="images/arrow.svg", alt="arrow")
+                span.show Твой преданный спутник 
+                    br
+                    |Hyggelig
+                span.hyggelig__title-line.general-title-line.show
+            .hyggelig__body 
+                .hyggelig__img.hyggelig__img-desktop 
+                .hyggelig__right 
+                    .hyggelig__right--top 
+                        .hyggelig__right--title.show Стальной нрав
+                        .hyggelig__right--direction.show Печь выполнена из углеродистой стали, 
+                            br
+                            |толщина 2 мм.
+                        ul.hyggelig__right--list 
+                            li.hyggelig__right--item.show Огромный запас прочности;
+                            li.hyggelig__right--item.show Исключены деформации корпуса 
+                                br
+                                |и варочной поверхности;
+                            li.hyggelig__right--item.show Красивый вид на долгие годы.
+                    .hyggelig__img.hyggelig__img-mobile 
+
+                    .hyggelig__right--bottom
+                        .hyggelig__right--text.show 
+                            |Термостойкая краска Elcon Max Therm 
+                            br
+                            |выдерживает температуру до 1200° 
+                            br
+                            |по цельсию и не выделяет токсичных 
+                            br
+                            |испарений после обжига печи.
+    .safety#safety
+        .safety__container
+            .container 
+                .safety__title.general-title.show 
+                    img(src="images/arrow.svg", alt="arrow")
+                    span.show.safety__title-span-desktop 
+                        |Спокойный сон под 
+                        br
+                        |звёздами 
+                    span.show.safety__title-span-mobile 
+                        |Спокойный сон 
+                        br
+                        |под звёздами 
+                    span.safety__title-line.general-title-line.show
+                .safety__subtitle.show Доверяй, как себе
+                .safety__description.show
+                    .show 
+                        |Самый частый вопрос, связанный с ночевкой в отапливаемой палатке - безопасна ли печь? 
+                        br
+                        |При соблюдении элементарной техники безопасности ваш&nbsp;сон ничто не потревожит.
+                    .show
+                        |Факторы случайного возгорания 
+                        .safety__description-btn.show сведены к минимуму
+                        .safety__description-popap.popap-description-safety 
+                            ul.popap-description-safety__list
+                                li.popap-description-safety__item Углеулавливатель и защитный коврик уберегут от угольков.
+                                li.popap-description-safety__item Устойчивые ножки не позволят печи опрокинуться.
+                                li.popap-description-safety__item Защитный “грибок” на дымоходе не даст соскользнувшему снегу 
+                                    br
+                                    |с пушистой елки залететь в трубу.
+                                li.popap-description-safety__item Непрямоточная конструкция способствует тому, что искры успевают 
+                                    br
+                                    |прогореть и охладиться в камере дожига ещё до вылета в дымоход.
+    
+                .safety__recommendations
+                    .safety__recommendations--title.show 
+                        |Рекомендации 
+                        br
+                        |по безопасному ночлегу:
+                    ul.safety__recommendations--list 
+                        li.safety__recommendations--item.show Располагайте печь на защитном коврике не ближе 30-ти см от края палатки.
+                        li.safety__recommendations--item.show Обеспечьте циркуляцию воздуха в палатке - а именно: сделайте 
+                            br
+                            |приток воздуха ближе к полу палатки, и отток воздуха, слегка приоткрыв 
+                            br
+                            |форточку в верхней части палатки.
+                    .safety__recommendations--text.show Приняв эти меры, вы обезопасите свой сон.
+
+    .constructive#constructive
+        .constructive__container.container 
+            .constructive__title.general-title.show 
+                img(src="images/arrow.svg", alt="arrow")
+                span.show Конструктив, продуманный до мелочей
+                span.constructive__title-line.general-title-line.show
+            .constructive__body
+                .constructive__left 
+                    .constructive__left-swiper.swiper(thumbsSlider="")  
+                        .constructive__left-swiper-wrapper.swiper-wrapper 
+                            .constructive__left-swiper-slide.swiper-slide
+                                .constructive__left-body
+                                    .constructive__left-title.show Углеулавливатель
+                                    .constructive__left-subtitle.show Предотвращает вылет угольков 
+                                        br
+                                        |из топливной камеры 
+                            .constructive__left-swiper-slide.swiper-slide
+                                .constructive__left-body
+                                    .constructive__left-title.show Воздушная заслонка
+                                    .constructive__left-subtitle.show Регулирует подачу воздуха
+                                        br
+                                        |в топливную камеру, 
+                                        br
+                                        |влияя на интенсивность горения 
+                            .constructive__left-swiper-slide.swiper-slide
+                                .constructive__left-body
+                                    .constructive__left-title.show Ручки с&nbsp;термоизоляцией
+                                    .constructive__left-subtitle.show Не нагреваются 
+                                        br
+                                        |во время работы печи 
+                            .constructive__left-swiper-slide.swiper-slide
+                                .constructive__left-body
+                                    .constructive__left-title.show Каминное окно
+                                    .constructive__left-subtitle.show Каминное окно рисует причудливые узоры и&nbsp;обеспечивает визуальный контроль горения
+                            .constructive__left-swiper-slide.swiper-slide
+                                .constructive__left-body
+                                    .constructive__left-title.show Зонтик дымохода
+                                    .constructive__left-subtitle.show Предотвращает воздушный удар,
+                                        br
+                                        |который может вызвать порыв ветра 
+                                        br
+                                        |или&nbsp;попадание комка снега в&nbsp;дымоход 
+                            .constructive__left-swiper-slide.swiper-slide
+                                .constructive__left-body
+                                    .constructive__left-title.show Устойчивые ножки
+                                    .constructive__left-subtitle.show Складные ножки 
+                                        br
+                                        |не позволят печи опрокинуться 
+                            .constructive__left-swiper-slide.swiper-slide
+                                .constructive__left-body
+                                    .constructive__left-title.show Прочный коврик
+                                    .constructive__left-subtitle.show Защищает ткань палатки
+                                        br
+                                        |от механических повреждений
+
+                    .constructive__left-img.show
+                        img(src="images/constructive/Vector.svg", alt="alt")
+                .constructive__right 
+                    .swiper.constructive__swiper
+                        .swiper-wrapper.constructive__swiper-wrapper 
+                            .swiper-slide.constructive__img 
+                                img(src="images/constructive/slider/01.jpg", alt="alt")
+                            .swiper-slide.constructive__img 
+                                img(src="images/constructive/slider/02.jpg", alt="alt")
+                            .swiper-slide.constructive__img 
+                                img(src="images/constructive/slider/03.jpg", alt="alt")
+                            .swiper-slide.constructive__img 
+                                img(src="images/constructive/slider/04.jpg", alt="alt")
+                            .swiper-slide.constructive__img 
+                                img(src="images/constructive/slider/05.jpg", alt="alt")
+                            .swiper-slide.constructive__img 
+                                img(src="images/constructive/slider/06.jpg", alt="alt")
+                            .swiper-slide.constructive__img 
+                                img(src="images/constructive/slider/07.jpg", alt="alt")
+                        .constructive__btn-prev.constructive__btn
+                        .constructive__btn-next.constructive__btn
+                    .constructive__pagination 
+        .constructive__img-bottom-main
+            .constructive__img-bottom-wrapper
+                .constructive__img-bottom.ibg 
+                    img(src="images/constructive/img-bottom1.jpg", alt="alt")
+
+    .set
+        .set__container.container
+            .set__title.general-title.show 
+                img(src="images/arrow.svg", alt="arrow")
+                span.show Прочная сумка 
+                    br
+                    |в комплекте
+                span.set__title-line.general-title-line.show
+            .set__body 
+                .set__left 
+                    .swiper.set__swiper 
+                        .swiper-wrapper.set__swiper-wrapper 
+                            .swiper-slide.set__image.ibg 	
+                                img(src="images/set/slider/03.jpg", alt="alt")
+                                .set__image-label Легко разместить  
+                                                br 
+                                                |в багажнике
+                            .swiper-slide.set__image.ibg 	
+                                img(src="images/set/slider/01.jpg", alt="alt")
+                                .set__image-label Материал хорошо
+                                                br 
+                                                |отталкивает грязь
+                            .swiper-slide.set__image.ibg 	
+                                img(src="images/set/slider/02.jpg", alt="alt")
+                                .set__image-label Удобно нести  
+                                                br 
+                                                |на плече
+                            .swiper-slide.set__image.ibg 	
+                                img(src="images/set/slider/04.jpg", alt="alt")
+                                .set__image-label Сумка-трансформер 
+                                                br 
+                                                |на липучках
+                        .set__btn-prev.set__btn
+                        .set__btn-next.set__btn
+                    .set__pagination 
+                .set__right 
+                    .set__right-text 
+                        p.show Сумка сшита из&nbsp;прочного 
+                            br
+                            |водоотталкивающего материала  
+                            br
+                            |Оксфорд&nbsp;600. 
+                        p.show Печь в&nbsp;собранном виде легко 
+                            br
+                            |разместить в&nbsp;багажнике&nbsp;автомобиля, 
+                            br
+                            |а&nbsp;топливная камера фиксируется 
+                            br
+                            |на&nbsp;сумке эластичным паракордом 
+                            br
+                            |с&nbsp;карабинами.
+
+                    .set__right-img.show 
+                        img(src="images/set/bag.png", alt="alt")
+
+    .transformation#transformation
+        .transformation__container.container 
+            .transformation__title Трансформация за 3 минуты
+            .swiper.transformation__swiper
+                .swiper-wrapper.transformation__swiper-wrapper
+                    .swiper-slide.transformation__swiper-slider
+                        .transformation__img
+                            img(src="images/transformation/1.jpg", alt="alt")
+                        .transformation__name Печь в транспортировочном состоянии
+                    .swiper-slide.transformation__swiper-slider 
+                        .transformation__img 
+                            img(src="images/transformation/2.jpg", alt="alt")
+                        .transformation__name Печь в сложенном виде
+                    .swiper-slide.transformation__swiper-slider 
+                        .transformation__img 
+                            img(src="images/transformation/3.jpg", alt="alt")
+                        .transformation__name Печь готова к работе
+                .swiper-button-prev.swiper-button
+                .swiper-button-next.swiper-button
+
+    .order#buy
+        .order__popap-back
+        .order__popap
+            .order__popap--container 
+                .order__popap--close
+                .order__popap--title Спасибо!
+
+                .order__popap--sudtitle 
+                    |В ближайшее время с вами свяжется 
+                    br
+                    |менеджер для подтверждения заказа.
+                .order__popap--icon 
+                    img(src="images/order/icon.svg", alt="alt")
+        .order__container.container 
+            .order__body 
+                .order__title Походная печь Hyggelig
+                .order__subtitle Твой надежный друг в любой 
+                    br
+                    |точке мира
+                form.order__form.jsOrderForm.jsPromoCode(action="#")
+                    .order__name.order__input-wrapper
+                        span
+                        input.order__input(type="text" name="name" required placeholder="Имя")
+                    .order__tel.order__input-wrapper
+                        span
+                        input.order__input.jsPhoneMask(type="tel" name="phone" required placeholder="+7 (___) ___-__-__")
+                    .order__promo.order__input-wrapper
+                        span
+                        input.order__input.jsPromoCodeInput(type="text" placeholder="Промокод")
+                        .order__input-promo-btn
+                    .order__promo-info.jsPromoCodeInfo
+                    .order__personal.order__input-wrapper
+                        input(type="checkbox" id="personal" checked required)
+                        label.order__personal-checkbox(for="personal")
+                        label.order__personal-text(for="personal") Я даю согласие на обработку своих персональных данных
+                    .order__buy
+                        span.order__price.jsPrice
+                            |Цена:&nbsp;
+                            span.value
+                            |&nbsp;р.
+                        button.order__bnt-buy(type="submit") Купить
+                .order__vector-img 
+                    img(src="images/order/vector-img.svg", alt="alt")
+            .order__img 
+                img(src="images/order/img.jpg", alt="alt")
+
+    .delivery
+        .delivery__container.container 
+            .delivery__img 
+            .delivery__body 
+                .delivery__title.general-title.show 
+                    img(src="images/arrow.svg", alt="arrow")
+                    span.show Бережная доставка 
+                        br
+                        |в руки
+                    span.delivery__title-line.general-title-line.show
+                ul.delivery__list 
+                    li.delivery__item.show 
+                        img(src="images/delivery/1.svg", alt="alt")
+                        span Надежная упаковка из пятислойного картона. 
+                    li.delivery__item.show 
+                        img(src="images/delivery/2.svg", alt="alt")
+                        span Контрольная проверка каждого компонента 
+                            br
+                            |перед отправкой.
+                    li.delivery__item.show 
+                        img(src="images/delivery/3.svg", alt="alt")
+                        span Сотрудничаем с Почтой России, 
+                            br
+                            |транспортными компаниями и курьерскими 
+                            br
+                            |службами.
+                    li.delivery__item.show 
+                        img(src="images/delivery/4.svg", alt="alt")
+                        span Быстрая доставка от 3 дней.
+
+    .last#last
+        .last__container.container 
+            .last__title-main Вопросы и ответы
+            .last__items 
+                .last__title Печь
+                .last__item.oven-last-item 
+                    .last__item-small.oven-last-item-small 
+                        .last__item-subtitle.oven-last-item__subtitle.active Из чего сделана печь?
+                            span
+                        .last__item-text.last__item-text-visible.oven-last-item__text 
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи 
+                            span.last__item-text-desktop .
+                            span.last__item-text-mobile смотреть.
+                    .last__item-small.oven-last-item-small 
+                        .last__item-subtitle.oven-last-item__subtitle.oven-last-item__subtitle-desktop А краска для красоты, или правда жаропрочная?
+                            span
+                        .last__item-text.oven-last-item__text 
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи.
+                        .last__item-subtitle.oven-last-item__subtitle.oven-last-item__subtitle-mobile Из чего сделана печь?
+                            span
+                        .last__item-text.oven-last-item__text 
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи.
+
+                .last__title.last__title-spoiler.last__title-spoiler-fuel Топливо
+                    span
+                .last__item.last__item-spoiler.fuel-last-item 
+                    .last__item-small.fuel-last-item-small 
+                        .last__item-subtitle.fuel-last-item__subtitle На чём работает печь?
+                            span
+                        .last__item-text.fuel-last-item__text
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи.
+                    .last__item-small.fuel-last-item-small 
+                        .last__item-subtitle.fuel-last-item__subtitle Чем дрова хуже?
+                            span
+                        .last__item-text.fuel-last-item__text 
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи.
+                    .last__item-small.fuel-last-item-small 
+                        .last__item-subtitle.fuel-last-item__subtitle На сколько хватает стандартной топливной камеры?
+                            span
+                        .last__item-text.fuel-last-item__text
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи.
+                    .last__item-small.fuel-last-item-small 
+                        .last__item-subtitle.fuel-last-item__subtitle Какой режим горения подойдет для запекания в духовке?
+                            span
+                        .last__item-text.fuel-last-item__text
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи.
+                    .last__item-small.fuel-last-item-small 
+                        .last__item-subtitle.fuel-last-item__subtitle Как регулируется интенсивность горения?
+                            span
+                        .last__item-text.fuel-last-item__text 
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи.
+                    .last__item-small.fuel-last-item-small 
+                        .last__item-subtitle.fuel-last-item__subtitle Кому пригодится дополнительная топливная камера?
+                            span
+                        .last__item-text.fuel-last-item__text 
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи.
+
+                .last__title.last__title-spoiler.active Личный опыт
+                    span
+                .last__item.last__item-spoiler.experience-last-item 
+                    .last__item-small.experience-last-item-small 
+                        .last__item-subtitle.experience-last-item__subtitle Из чего сделана печь?
+                            span
+                        .last__item-text.experience-last-item__text 
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи.
+                    .last__item-small.experience-last-item-small 
+                        .last__item-subtitle.experience-last-item__subtitle А краска для красоты, или правда жаропрочная?
+                            span
+                        .last__item-text.experience-last-item__text 
+                            |Корпус печи выполнен из углеродистой стали 2 мм. Этой толщины достаточно, 
+                            br
+                            |чтобы иметь необходимый запас прочности от прогорания и деформации. Мы 
+                            br
+                            |провели тест “непрерывного горения” - через 240 часов не зафиксировано 
+                            br
+                            |каких-либо изменений в геометрии печи.
+
+

@@ -1,0 +1,214 @@
+.footer {
+	background-color: #101010;
+	padding: 40px 0 29px;
+	color: #ffffff;
+	font-family: 'Muller';
+	font-style: normal;
+	@media (max-width: 768px){
+		padding: 5.333vw 0 6.667vw;
+	}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 768px){
+			align-items: flex-end;
+		}
+	}
+
+		&__left {
+			&--logo {
+				display: block;
+				width: 162px;
+				@media (max-width: 768px){
+					width: 23.200vw;
+				}
+				img {
+					width: 100%;
+				}
+			}
+			
+			&--text {
+				margin-top: 20px;
+				@media (max-width: 768px){
+					margin-top: 3.467vw;
+				}
+				span {
+					display: block;
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 120%;
+					color: #9A9A9A;
+					@media (max-width: 768px){
+						font-size: 3.200vw;
+					}
+				}
+			}
+		}
+
+		&__menu {
+			flex: 1 1 auto;
+			@media (max-width: 768px){
+				flex: 0 1 auto;
+			}
+		}
+
+		&__right {
+			&--tel {
+				@media (max-width: 768px){
+					display: none;
+				}
+				span {
+					font-size: 15px;
+					line-height: 100%;
+					@media (max-width: 992px){
+						font-size: 12px;
+					}
+				}
+				a {
+					display: flex;
+					align-items: center;
+					img {
+						width: 16px;
+						height: 16px;
+						margin-right: 5.34px;
+					}
+					span {
+						font-weight: 700;
+					}
+				}
+				>span {
+					display: inline-block;
+					margin-top: 10px;
+					font-weight: 400;
+					color: #D24318;
+				}
+			}
+			
+			&--email {
+				@media (max-width: 768px){
+					display: none;
+				}
+				margin-top: 20px;
+				img {
+					width: 24px;
+					height: 24px;
+					margin-right: 10px;
+				}
+				span {
+					font-family: 'TT Norms';
+					font-weight: 400;
+					font-size: 20px;
+					line-height: 120%;
+					@media (max-width: 992px){
+						font-size: 14px;
+					}
+				}
+			}
+			
+			&--soc {
+				margin-top: 20px;
+				display: flex;
+				align-items: center;
+				@media (max-width: 768px){
+					justify-content: flex-end;
+				}
+				a {
+					&:not(:first-child) {
+						margin-left: 15px;
+					}
+					width: 16px;
+					@media (max-width: 768px){
+						width: 4.267vw;
+					}
+					img {
+						width: 100%;
+					}
+				}
+			}
+			&--copy-mob {
+				display: none;
+				@media (max-width: 768px){
+					display: block;
+					margin-top: 2.667vw;
+					text-transform: uppercase;
+					font-weight: 400;
+					font-size: 3.200vw;
+					line-height: 100%;
+				}
+			}
+		}
+
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+		text-transform: uppercase;
+		@media (max-width: 768px){
+			display: none;
+		}
+	}
+}
+
+.menu-footer {
+	@media (max-width: 768px){
+		display: none;
+	}
+	margin-left: 15px;
+	&__row {
+		display: flex;
+	}
+	
+		&__list {
+			&:first-child {
+				margin-right: 74px;
+				@media (max-width: 992px){
+					margin-right: 20px;
+				}
+			}
+			&:nth-child(2){
+				margin-right: 74px;
+				@media (max-width: 992px){
+					margin-right: 20px;
+				}
+			}
+			&:last-child{
+				.menu-footer__item {
+					&:last-child{
+						.menu-footer__link {
+							color: #D24318;
+							position: relative;
+							&::after{
+								content:'';
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								width: 100%;
+								height: 1px;
+								background-color: #D24318;
+							}
+						}
+					}
+				}
+			}
+		}
+	
+			&__item {
+				&:not(:first-child) {
+					margin-top: 15px;
+				}
+			}
+	
+				&__link {
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 100%;
+					transition: all 0.3s ease 0s;
+					@media (max-width: 992px){
+						font-size: 12px;
+					}
+					&:hover{
+						color: #D24318;
+					}
+				}
+}
+

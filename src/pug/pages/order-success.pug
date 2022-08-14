@@ -1,0 +1,105 @@
+extends ../layouts/default
+
+block vars
+    -
+        const page = {
+            title: 'HYGGELIG'
+        };
+block main
+    .order-success#orderSuccessApp
+
+        .order-success__container.container(@click="docClick")
+            .order-success__title.general-title
+                img(src="images/arrow.svg", alt="arrow")
+                span Спасибо за ваш выбор!
+                span.order-success__title-line.general-title-line
+
+            .order-success__order-info(v-cloak)
+                |Номер вашего заказа&nbsp;
+                span.order-success__order-number.jsOrderNumber {{ orderNumber }}
+                br
+                |Мы перезвоним в течении 5 минут для подтверждения и согласования способа доставки.
+
+            .order-success__other-products-text(v-if="active")
+                |Возможно вас заинтересуют другие наши товары.
+                br
+                |Добавьте их к основному заказу и экономьте на доставке!
+
+            .order-success__cart-block(v-if="active", ref="cart" v-cloak)
+                .cart-btn(
+                    @click="togglePopup"
+                    :class="{empty: isCartEmpty, filled: ! isCartEmpty, open: popupOpen}"
+                    @mouseenter="cartHovered = true"
+                    @mouseleave="cartHovered = false"
+                )
+                    .cart-btn__icon
+                    .cart-btn__count {{ cartItemsCount }}
+                    .cart-btn__label {{ cartItemsTotal }} руб.
+                    .cart-btn__select
+
+                .order-success__cart-popup-holder
+                    .cart-popup(:class="{active: isShowCartEmpty}")
+                        .cart-popup__inner.cart-popup__inner-empty Корзина пуста
+
+                    .cart-popup(:class="{active: isShowCartPopup}")
+                        .cart-popup__inner
+                            .cart-popup__list.scrollbar
+                                .cart-popup__item(v-for="item in cartItems")
+                                    .cart-popup__item-delete(@click="deleteFromCart(item)")
+                                    .cart-popup__item-title {{ item.name }}
+                                    .cart-popup__item-controls
+                                        .cart-popup__item-price {{ item.price }}&nbsp;руб.
+                                        quantityselect.cart-popup__item-quantity(
+                                            v-model="item.quantity",
+                                            :min="1",
+                                            :max="99",
+                                        )
+
+                            .cart-popup__footer
+                                .cart-popup__footer-info
+                                    |Сумма заказа:
+                                    span.cart-popup__footer-info-amount &nbsp; {{ cartItemsTotal }} руб.
+                                .cart-popup__footer-actions
+                                    .btn.cart-popup__footer-btn(@click="makeOrder") Оформить заказ
+
+            .order-success__products-wrap.scrollbar(v-if="active", v-cloak)
+                .order-success__products
+
+                    .product-item(v-for="item in items")
+                        .product-item__image-col
+                            img.product-item__image(:src="`images/products/${item.code}.png`", alt="")
+                        .product-item__content-col
+                            .product-item__name {{ item.name }}
+                            .product-item__desc {{ item.text }}
+                            .product-item__price {{ item.price }} руб.
+                            .product-item__help Добавьте деталь, чтобы получить её вместе с&nbsp;основным заказом
+                            .product-item__btn-wrap
+                                .btn.product-item__btn(@click="addToCart(item)") Добавить к заказу
+                            quantityselect.product-item__quantity(
+                                v-model="item.quantity",
+                                :min="1",
+                                :max="99",
+                            )
+
+        .order-success__popup-back(:class="{active: popup.added}" @click="closePopup")
+            .order-success__popup-modal
+                .order-success__popup-container
+                    .order-success__popup-close(@click="closePopup")
+                    .order-success__popup-title Спасибо за ваш выбор!
+                    .order-success__popup-sudtitle Товар добавлен к заказу!
+                    .order-success__popup-actions
+                        .order-success__popup-btn.btn(@click="makeOrder") Оформить&nbsp;заказ
+                        .order-success__popup-btn-link(@click="closePopup") Добавить ещё один товар
+
+        .order-success__popup-back(:class="{active: popup.complete}" @click="closePopup")
+            .order-success__popup-modal
+                .order-success__popup-container
+                    .order-success__popup-close(@click="closePopup")
+                    .order-success__popup-title Ваш заказ оформлен!
+                    .order-success__popup-sudtitle Ожидайте звонка менеджера
+                    .order-success__popup-actions
+                        .order-success__popup-btn.btn Спасибо!
+
+block scripts
+    script(src="https://unpkg.com/vue@3.2.37/dist/vue.global.js")
+

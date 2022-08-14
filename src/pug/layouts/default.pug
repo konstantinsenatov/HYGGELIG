@@ -1,0 +1,43 @@
+doctype html
+
+block vars
+include ../components/_mixins
+
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="description" content="")
+		meta(name="keywords" content="")
+		link(type='image/x-icon' href='images/fav/Hyggelig.ico' rel='shortcut icon')
+		link(type='Image/x-icon' href='images/fav/Hyggelig.ico' rel='icon')
+		link(href="css/main.min.css" rel="stylesheet")
+		link(href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet")
+		link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
+		link(href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet" media="screen")
+
+		title= `${page.title}`
+
+	body
+		.wrapper
+			block header
+				include ../partials/_header
+
+			main.main
+				block main
+
+			block footer
+				include ../partials/_footer
+
+		block modals
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js")
+		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+		script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+		script(src="https://unpkg.com/imask@6.4.2/dist/imask.js")
+		script(src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js")
+
+		script(src="js/main.min.js")
+
+		block scripts

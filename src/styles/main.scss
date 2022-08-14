@@ -1,0 +1,22 @@
+/* base */
+@import "base/reset";
+@import "base/fonts";
+
+/*libs*/
+
+
+/* main */
+@import "partials/main";
+
+/* components */
+@import "partials/header";
+@import "partials/footer";
+
+
+/*pages*/
+@import "partials/comfort__video";
+@import "partials/galary";
+@import "partials/characteristics";
+@import "partials/check";
+@import "partials/order-success";
+

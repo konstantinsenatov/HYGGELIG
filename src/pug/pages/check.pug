@@ -1,0 +1,76 @@
+extends ../layouts/default
+
+block vars
+    -
+        const page = {
+            title: 'HYGGELIG'
+        };
+block main
+    .check#registrationApp
+
+        .check__container.container(v-if="! isRegistered")
+            .check__title.general-title
+                img(src="images/arrow.svg", alt="arrow")
+                span Проверка подлинности
+                    br
+                    | продукта
+                span.check__title-line.general-title-line
+
+            .check__row
+                .check__text.check__text-mobile Все печи HYGGELIG защищены индивидуальным серийным  номером. Проверьте подлинность печи и получите расширенную гарантию.
+                .check__body
+                    .check__text.check__text-desktop Все печи HYGGELIG защищены индивидуальным серийным  номером. Проверьте подлинность печи и получите расширенную гарантию.
+                    form.check__form.form-check(action="#" @submit="register")
+                        .form-check__input-wrapper
+                            .form-check__icon
+                                img(src="images/2check/1.svg", alt="alt")
+                            input(type="text" placeholder="Имя" required v-model="user.name")
+                        .form-check__input-wrapper
+                            .form-check__icon
+                                img(src="images/2check/2.svg", alt="alt")
+                            input(type="tel" placeholder="+7 (___) ___-__-__" required v-model="user.phone" ref="phone")
+                        .form-check__input-wrapper
+                            .form-check__icon
+                                img(src="images/2check/3.svg", alt="alt")
+                            input(type="text" placeholder="Серийный номер" required v-model="user.serialNumber" ref="serial")
+                        button.form-check__btn(type="submit") РЕГИСТРАЦИЯ
+
+                .check__img
+                    .check__img--text
+                        span Уникальный идентификационный номер вы найдёте на заслонке
+
+
+        .registered__container.container(v-if="isRegistered")
+            .registered__title.general-title Поздравляем с регистрацией продукта!
+            .registered__main-text
+                |Ваша печь HYGGELIG с серийным номером&nbsp;
+                span.registered__main-text-serial-number {{ product.serialNumber }}
+                br
+                |теперь имеет расширенную гарантию сроком 3 года с момента продажи.
+
+            .registered__row.registered__row-main
+                .registered__col1
+                    .registered__col1-img-wrap
+                        img.registered__photo-lg(src="images/3congratulations/1.jpg")
+                        img.registered__photo-sm(src="images/3congratulations/11.jpg")
+
+                .registered__col2.registered__col-main-info
+                    .registered__main-info
+                        .registered__content-header Печь Hyggelig
+                        table.registered__table
+                            tr(v-for="row in product.rows")
+                                th {{ row.name }}
+                                td {{ row.value }}
+
+            .registered__row.registered__row-footer
+                .registered__col1.registered__col1-footer
+                    .registered__col1-comment(v-if="product.comment")
+                        .registered__col1-comment-title Особые отметки:
+                        .registered__col1-comment-text {{ product.comment }}
+
+                .registered__col2.registered__col2-warranty-doc-link
+                    a.registered__warranty-doc-link(href="#") Условия гарантийного обслуживания
+
+block scripts
+    script(src="https://unpkg.com/vue@3.2.37/dist/vue.global.js")
+
