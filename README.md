@@ -8,6 +8,4 @@ https://konstantinsenatov.github.io/HYGGELIG/public/characteristics.html - Chara
 
 https://konstantinsenatov.github.io/HYGGELIG/public/check.html - Check page
 
-https://konstantinsenatov.github.io/HYGGELIG/public/comfort__video.html - Video page
-
 https://konstantinsenatov.github.io/HYGGELIG/public/order-success.html.html - Order page
